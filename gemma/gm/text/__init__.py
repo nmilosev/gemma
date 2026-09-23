@@ -14,7 +14,6 @@
 
 """Text processing utilities."""
 
-
 from etils import epy as _epy
 
 # pylint: disable=g-import-not-at-top,g-importing-member
@@ -41,6 +40,21 @@ with _epy.lazy_api_imports(globals()):
   from gemma.gm.text._sampling import RandomSampling
   from gemma.gm.text._sampling import TopkSampling
   from gemma.gm.text._sampling import TopPSampling
+
+  # System One Sampler
+  from gemma.gm.text._systemone_sampler import SystemOneSampler
+  from gemma.gm.text._systemone_sampler import QuestionType
+  from gemma.gm.text._systemone_sampler import QuestionSpec
+  from gemma.gm.text._systemone_sampler import NoulResult
+  from gemma.gm.text._systemone_sampler import ChoiceResult
+  from gemma.gm.text._systemone_sampler import ScoreResult
+  from gemma.gm.text._systemone_sampler import DecisionResult
+  from gemma.gm.text._systemone_sampler import SystemOneResponse
+  from gemma.gm.text._systemone_sampler import build_tree_attention_pack
+  from gemma.gm.text._systemone_sampler import calibrate_and_score
+  from gemma.gm.text._systemone_sampler import format_noul_prompt
+  from gemma.gm.text._systemone_sampler import format_choice_prompt
+  from gemma.gm.text._systemone_sampler import format_score_prompt
 
   # Other utils
   # from gemma.gm.text import _template as template
